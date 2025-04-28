@@ -1,125 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-</head>
-<body>
+# 🎯 Regime-Switching RL Portfolio Manager
 
-<h1>📈 Regime-Switching Reinforcement Learning Portfolio Manager</h1>
+**Adaptive portfolio allocation through reinforcement learning and dynamic market regime awareness.**
 
-<p><strong>Adaptive Trading Agent for Real-World Markets</strong></p>
+---
 
-<hr>
+## ✨ Project Overview
 
-<h2>🌟 Overview</h2>
+**Regime-Switching RL Portfolio Manager** is an innovative application of reinforcement learning in finance, designed to dynamically adjust asset allocations based on real-time market conditions — bull, bear, or sideways.  
+Instead of assuming constant market behavior, it embraces structural shifts, improving responsiveness during volatility spikes, rallies, and downturns.
 
-<p>In traditional finance, portfolio models often assume <em>stationarity</em> — that markets behave consistently over time.<br>
-But real-world markets don't: they shift between <strong>bull runs</strong>, <strong>bear crashes</strong>, and <strong>volatile sideways patterns</strong>.</p>
+---
 
-<p>This project builds a <strong>Reinforcement Learning (RL)</strong> agent that <strong>detects</strong> market regimes dynamically and <strong>adapts</strong> its trading strategy in real-time.</p>
+## 🌟 Key Features
 
-<ul>
-  <li>✅ Market Regime Detection (Bull, Bear, Sideways)</li>
-  <li>✅ Reinforcement Learning (Q-Learning / PPO)</li>
-  <li>✅ Fully CPU-compatible (no GPU required)</li>
-  <li>✅ Built with Python, NumPy, Stable-Baselines3, and lightweight libraries</li>
-</ul>
+- 📈 **Market Regime Detection**: Automatic classification via RSI and MACD indicators.
+- 🧠 **Custom RL Environment**: Combines historical returns with regime flags.
+- 🤖 **Adaptive RL Agent**: PPO-based model trained for dynamic buy/hold/sell decisions.
+- ⚡ **Lightweight Training**: CPU-optimized using free historical Yahoo Finance data.
+- 🎯 **Risk-Return Optimization**: Learns to balance profits against volatility over time.
 
-<hr>
+---
 
-<h2>🚀 Key Features</h2>
+## 🛠️ Technology Stack
 
-<ul>
-  <li><strong>Regime Awareness:</strong> Uses Gaussian Mixture Models (GMM) to classify historical market behavior into different regimes.</li>
-  <li><strong>Dynamic Strategy Adaptation:</strong> The agent modifies its buy/hold/sell decisions based on the current detected regime.</li>
-  <li><strong>Reward-Based Learning:</strong> Learns from profits (rewards) and penalties (losses) to improve trading decisions over time.</li>
-  <li><strong>Risk-Return Optimization:</strong> Balances maximizing returns while controlling for regime-specific risks.</li>
-</ul>
+| Category              | Tools/Libraries                      |
+| --------------------- | ------------------------------------- |
+| **Programming Language** | Python 3.10                           |
+| **Reinforcement Learning** | Stable-Baselines3 (PPO)              |
+| **Environment**        | Gymnasium                            |
+| **Data Analysis**      | NumPy, Pandas                        |
+| **Technical Indicators** | TA-Lib                               |
+| **Data Source**        | Yahoo Finance API                    |
+| **Visualization**      | Matplotlib, Seaborn                  |
 
-<hr>
+## 🚀 How It Works
 
-<h2>🛠️ Tech Stack</h2>
+- **Environment Setup**: Recent returns window + market regime flags.
+- **Learning Phase**: PPO agent optimizes policy based on profits and risk management.
+- **Adaptation**: Strategic allocation shifts during different market regimes.
 
-<ul>
-  <li>🐍 Python 3</li>
-  <li>📦 Libraries:
-    <ul>
-      <li>Stable-Baselines3</li>
-      <li>Gymnasium</li>
-      <li>Numpy</li>
-      <li>Pandas</li>
-      <li>Scikit-learn</li>
-      <li>yFinance</li>
-      <li>Technical Analysis Library (ta-lib)</li>
-    </ul>
-  </li>
-  <li>🎯 RL Algorithm: PPO (Proximal Policy Optimization)</li>
-  <li>📈 Regime Detection: Gaussian Mixture Models (GMM)</li>
-</ul>
+---
 
-<hr>
+## 🏆 Performance Metrics
 
-<h2>🔧 Workflow</h2>
+- ✅ Cumulative Return Comparison: RL Agent vs Static Allocation
+- ✅ Sharpe Ratio Improvement: Risk-adjusted returns enhanced
+- ✅ Volatility Control: Better handling during regime shifts
 
-<ol>
-  <li><strong>Install dependencies:</strong><br>
-    <code>pip install stable-baselines3 gymnasium shimmy yfinance ta pandas numpy scikit-learn matplotlib seaborn</code>
-  </li>
-  <li><strong>Download historical price data:</strong><br>
-    - Asset: SPY (S&P 500 ETF)<br>
-    - Source: Yahoo Finance
-  </li>
-  <li><strong>Preprocess data:</strong><br>
-    - Calculate daily returns and rolling volatility.<br>
-    - Apply GMM for regime labeling.
-  </li>
-  <li><strong>Create a custom trading environment:</strong><br>
-    - Observations: [Current price, Previous price, Balance, Shares held]<br>
-    - Actions: Buy, Hold, Sell
-  </li>
-  <li><strong>Train the RL agent:</strong><br>
-    - Using PPO algorithm to learn across multiple regimes.
-  </li>
-  <li><strong>Test & Evaluate:</strong><br>
-    - Simulate real-world trading.<br>
-    - Compare adaptive performance against static strategies.
-  </li>
-</ol>
+---
 
-<hr>
+## 💡 Future Enhancements
 
-<h2>🎬 Demo</h2>
+- 🧩 Extend to multi-asset portfolios (stocks, ETFs, crypto)
+- 🧠 Integrate machine learning-based regime detection (LSTM, Random Forest)
+- 🔥 Add portfolio rebalancing and dynamic position sizing
+- ☁️ Deploy a live version on cloud-based paper trading platforms
 
-<p><strong>Video Demo Available:</strong><br>
-(Attached in LinkedIn Post / GitHub Release)</p>
+---
 
-<p>Watch the walkthrough showing regime detection, model training, and live trading simulation!</p>
+## 📜 License
 
-<hr>
+This project is licensed under the **MIT License**. Feel free to use, modify, and build upon it for academic, personal, or commercial projects (with attribution).
 
-<h2>📊 Results</h2>
+---
 
-<ul>
-  <li>Successfully detects and adapts to changing market regimes.</li>
-  <li>Demonstrates better risk-adjusted returns compared to static models.</li>
-  <li>Training done fully on CPU — no GPU dependency.</li>
-</ul>
+## 👨‍💻 Author
 
-<hr>
+**Built with ❤️ by Niraj Kumar**
 
-<h2>🚀 Future Improvements</h2>
+[LinkedIn](https://www.linkedin.com/in/nirajkofficial/) | [Instagram](https://www.instagram.com/nirajkumar_real/)
 
-<ul>
-  <li>Integrate more sophisticated regime signals (e.g., macroeconomic indicators).</li>
-  <li>Expand to multi-asset portfolio management.</li>
-  <li>Deploy live with real-time streaming data.</li>
-</ul>
+---
 
-<hr>
+# 📈 Stay adaptive. Stay profitable. 
+```
 
-<h2>🤝 Acknowledgments</h2>
-
-<p>Huge thanks to the open-source communities in <strong>Reinforcement Learning</strong>, <strong>Quantitative Finance</strong>, and <strong>Machine Learning</strong> — without which this project would not be possible.</p>
-
-</body>
-</html>
