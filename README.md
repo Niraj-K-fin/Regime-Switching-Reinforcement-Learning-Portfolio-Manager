@@ -1,77 +1,95 @@
-# 🎯 Regime-Switching RL Portfolio Manager
+# Regime-Switching Reinforcement Learning Portfolio Manager
 
-**Adaptive portfolio allocation through reinforcement learning and dynamic market regime awareness.**
-
----
-
-## ✨ Project Overview
-
-**Regime-Switching RL Portfolio Manager** is an innovative application of reinforcement learning in finance, designed to dynamically adjust asset allocations based on real-time market conditions — bull, bear, or sideways.  
-Instead of assuming constant market behavior, it embraces structural shifts, improving responsiveness during volatility spikes, rallies, and downturns.
+> **An intelligent, adaptive investment system that learns to read the market, respond to change, and optimize returns.**
 
 ---
 
-## 🌟 Key Features
-
-- 📈 **Market Regime Detection**: Automatic classification via RSI and MACD indicators.
-- 🧠 **Custom RL Environment**: Combines historical returns with regime flags.
-- 🤖 **Adaptive RL Agent**: PPO-based model trained for dynamic buy/hold/sell decisions.
-- ⚡ **Lightweight Training**: CPU-optimized using free historical Yahoo Finance data.
-- 🎯 **Risk-Return Optimization**: Learns to balance profits against volatility over time.
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
+![Stable-Baselines3](https://img.shields.io/badge/Stable--Baselines3-rl-yellow?logo=python)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## 🛠️ Technology Stack
+## 🚀 Overview
 
-| Category              | Tools/Libraries                      |
-| --------------------- | ------------------------------------- |
-| **Programming Language** | Python 3.10                           |
-| **Reinforcement Learning** | Stable-Baselines3 (PPO)              |
-| **Environment**        | Gymnasium                            |
-| **Data Analysis**      | NumPy, Pandas                        |
-| **Technical Indicators** | TA-Lib                               |
-| **Data Source**        | Yahoo Finance API                    |
-| **Visualization**      | Matplotlib, Seaborn                  |
-
-## 🚀 How It Works
-
-- **Environment Setup**: Recent returns window + market regime flags.
-- **Learning Phase**: PPO agent optimizes policy based on profits and risk management.
-- **Adaptation**: Strategic allocation shifts during different market regimes.
+This project implements a next-generation, AI-powered portfolio manager that combines **reinforcement learning (RL)** with **market regime detection** and **macroeconomic signals**. The result is an agent that dynamically allocates assets, manages risk, and adapts to ever-changing financial markets-just like a real-world quant.
 
 ---
 
-## 🏆 Performance Metrics
+## 🛠️ Tech Stack
 
-- ✅ Cumulative Return Comparison: RL Agent vs Static Allocation
-- ✅ Sharpe Ratio Improvement: Risk-adjusted returns enhanced
-- ✅ Volatility Control: Better handling during regime shifts
-
----
-
-## 💡 Future Enhancements
-
-- 🧩 Extend to multi-asset portfolios (stocks, ETFs, crypto)
-- 🧠 Integrate machine learning-based regime detection (LSTM, Random Forest)
-- 🔥 Add portfolio rebalancing and dynamic position sizing
-- ☁️ Deploy a live version on cloud-based paper trading platforms
+- **Programming Language:** Python 3.8+
+- **Machine Learning:** [Stable-Baselines3](https://github.com/DLR-RM/stable-baselines3) (PPO)
+- **RL Environment:** Custom [OpenAI Gym](https://www.gymlibrary.dev/) environment
+- **Data Handling:** Pandas, NumPy
+- **Visualization:** Matplotlib, Seaborn
+- **Technical Indicators:** TA-Lib, custom code
+- **Jupyter/Colab:** For interactive exploration and prototyping
 
 ---
 
-## 📜 License
+## ✨ Key Features
 
-This project is licensed under the **MIT License**. Feel free to use, modify, and build upon it for academic, personal, or commercial projects (with attribution).
+- **Market Regime Detection:**  
+  Uses technical indicators (Bollinger Bands, RSI, MACD) to identify bull, bear, and neutral market states for each asset.
+- **Macro-Aware Decision Making:**  
+  Integrates VIX and 10-year Treasury yields for a holistic market perspective.
+- **Volatility Targeting:**  
+  Dynamically scales positions based on recent volatility to manage risk.
+- **Robust Risk Controls:**  
+  Models transaction costs, trailing stop-loss, and take-profit mechanisms for realistic trading.
+- **Continuous, Fine-Grained Allocation:**  
+  Allocates fractional weights across multiple assets for optimal flexibility.
+- **Custom OpenAI Gym Environment:**  
+  Simulates multi-asset trading with historical ETF data (SPY, QQQ, TLT, GLD).
+- **State-of-the-Art RL Training:**  
+  Powered by Proximal Policy Optimization (PPO).
 
 ---
 
-## 👨‍💻 Author
+## 📈 Model Training Results
 
-**Built with ❤️ by Niraj Kumar**
-
-[LinkedIn](https://www.linkedin.com/in/nirajkofficial/) | [Instagram](https://www.instagram.com/nirajkumar_real/)
+- **Adaptive portfolio allocation** that responds to market regimes and macro trends.
+- **Improved Sharpe ratios** and **controlled drawdowns** in backtests.
+- **Stable training** with increasing episode rewards and value function accuracy.
 
 ---
 
-# 📈 Stay adaptive. Stay profitable. 
-```
+## 📚 How It Works
 
+- **Environment:**  
+  Custom Gym environment simulates trading with regime detection, macro features, and realistic constraints.
+- **Agent:**  
+  PPO agent learns to allocate capital adaptively, balancing risk and reward.
+- **Data:**  
+  Four years of historical ETF data (SPY, QQQ, TLT, GLD) + macro indicators.
+- **Performance:**  
+  Evaluated via backtesting, with metrics like Sharpe ratio and max drawdown.
+
+---
+
+## 🧠 Why It Matters
+
+Traditional portfolio strategies are often static or rule-based. This project shows how AI can learn to **adapt on the fly**, managing risk and seizing opportunities as market conditions evolve.
+
+---
+
+## 🙌 Contributing
+
+Contributions, suggestions, and forks are welcome! Please open an issue or pull request.
+
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+## 💡 Inspiration
+
+Inspired by the intersection of quantitative finance and artificial intelligence, this project aims to bridge the gap between academic RL models and real-world portfolio management.
+
+---
+
+**Ready to see AI in action on Wall Street? Dive in, experiment, and let’s build the future of investing together!**
